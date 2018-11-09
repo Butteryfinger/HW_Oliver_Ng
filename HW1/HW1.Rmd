@@ -31,7 +31,7 @@ ggplot(data = GDP, aes(Year, GDP, colour = "red")) + geom_line()
 
 Började att hitta datan från <https://countryeconomy.com/gdp/sweden> och copy-paste det i GDP.txt
 
-Sen tar vi bort gdp ökning per år och ta bort bokstäverna i antal gdp och byt tecknet , till . med find\_replace(vet) då det orsakade underligheter i plotten.
+Sen tar vi bort gdp ökning per år och ta bort bokstäverna i antal gdp och byt tecknet "," till "." med find replace i notepad då det orsakade underligheter i plotten.
 
 Därefter plotta den med koden och en rudimentär graf är given.
 
