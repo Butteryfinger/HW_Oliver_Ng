@@ -1,0 +1,40 @@
+---
+title: "HW1"
+author: "Oliver Ng"
+date: "9 november 2018"
+output: github_document
+---
+
+Oliver Ng
+8 november 2018
+
+Föregående erfarenhet: Har använt R under 3 kurser, måttligt kunskap inom detta dock ingenting inom tidyverse package, mest lär sig med överdrivet användning av google.
+
+Testa att göra en plot över Sveriges GDP
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(ggplot2)
+
+GDP <- read.table("HW1_files.txt")
+
+colnames(GDP) <- c("Year", "GDP")
+
+head(GDP)
+
+ggplot(data = GDP, aes(Year, GDP, colour = "red")) + geom_line()
+```
+
+
+Började att hitta datan från <https://countryeconomy.com/gdp/sweden> och copy-paste det i GDP.txt
+
+Sen tar vi bort gdp ökning per år och ta bort bokstäverna i antal gdp och byt tecknet , till . med find\_replace(vet) då det orsakade underligheter i plotten.
+
+Därefter plotta den med koden och en rudimentär graf är given.
+
+```{r}
+sessionInfo()
+```
